@@ -1,0 +1,159 @@
+{% partialdef contact-form %}
+<!-- From Uiverse.io by aboalsim114 -->
+<form class="form">
+    <label for="name">Name</label>
+    <input name="name" id="name" placeholder="My name is...." class="input" type="text">
+
+    <label for="email">Email</label>
+    <input name="email" id="email" placeholder="myname@...." class="input" type="text">
+
+    <label for="gender">Gender:</label>
+    <select name="gender" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+
+    <label for="role">As:</label>
+
+    <select name="role" id="role">
+        <option value="alumni">Alumni</option>
+        <option value="non-alumni">Non-Alumni</option>
+    </select>
+
+    <label for="message">Message</label>
+    <textarea placeholder="" name="message" id="message">
+        I want to....
+    </textarea>
+
+
+    <button>Submit</button>
+    <div class="socials">
+        <!-- From Uiverse.io by mrhyddenn -->
+        <button>
+            <svg viewBox="0 0 16 16" class="bi bi-twitter" fill="currentColor" height="18" width="18"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+                </path>
+            </svg>
+            <span>Twitter</span>
+        </button>
+        <!-- From Uiverse.io by Mangesh636 -->
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-twitter"
+                viewBox="0 0 24 24">
+                <path
+                    d="M18.3362 18.339H15.6707V14.1622C15.6707 13.1662 15.6505 11.8845 14.2817 11.8845C12.892 11.8845 12.6797 12.9683 12.6797 14.0887V18.339H10.0142V9.75H12.5747V10.9207H12.6092C12.967 10.2457 13.837 9.53325 15.1367 9.53325C17.8375 9.53325 18.337 11.3108 18.337 13.6245V18.339H18.3362ZM7.00373 8.57475C6.14573 8.57475 5.45648 7.88025 5.45648 7.026C5.45648 6.1725 6.14648 5.47875 7.00373 5.47875C7.85873 5.47875 8.55173 6.1725 8.55173 7.026C8.55173 7.88025 7.85798 8.57475 7.00373 8.57475ZM8.34023 18.339H5.66723V9.75H8.34023V18.339ZM19.6697 3H4.32923C3.59498 3 3.00098 3.5805 3.00098 4.29675V19.7033C3.00098 20.4202 3.59498 21 4.32923 21H19.6675C20.401 21 21.001 20.4202 21.001 19.7033V4.29675C21.001 3.5805 20.401 3 19.6675 3H19.6697Z">
+                </path>
+            </svg>
+            <span>LinkedIn</span>
+        </button>
+
+    </div>
+</form>
+{% endpartialdef %}
+
+{% partialdef join-form %}
+
+<form action="" class="form">
+    <label for="name">Name</label>
+    <input name="name" id="name" placeholder="My name is...." class="input" type="text">
+
+    <label for="role">Requesting as</label>
+    <select name="role" id="role">
+        <option value="1">Alumnus &amp; Startup Founder</option>
+        <option value="2">Alumnus &amp; Non-Startup Founder</option>
+        <option value="3">Non-alumnus &amp; Startup Founder</option>
+        <option value="4">Non-alumnus &amp; Non-Startup Founder</option>
+    </select>
+
+    <label for="entity">Entity you Co-founded(if applicable)</label>
+    <input type="text" name="entity" id="entity" placeholder="abcd llc">
+
+    <label for="phone">Phone Number</label>
+    <input type="text" name="phone" id="phone" placeholder="one,two,...">
+
+    <label for="pmessage">Personal Message</label>
+    <textarea name="pmessage" id="pmessage">
+        ......
+    </textarea>
+    <button>Submit</button>
+
+</form>
+
+{% endpartialdef %}
+
+{% partialdef slot-form %}
+
+<form action="" class="form">
+    <label for="name">Name</label>
+    <input name="name" id="name" placeholder="My name is...." class="input" type="text">
+
+    <label for="entity">Startup you Co-founded</label>
+    <input type="text" name="entity" id="entity" placeholder="abcd llc">
+
+    <label for="phone">Phone Number</label>
+    <input type="text" name="phone" id="phone" placeholder="one,two,...">
+
+    <label for="website">Website</label>
+    <input type="text" name="website" id="website" placeholder="abcd.com">
+
+    <label for="links">Entity Social media links</label>
+    <textarea name="links" id="links">
+        x.com.....
+    </textarea>
+
+    <label for="details">Any other Details</label>
+    <textarea name="details" id="details">
+        We do......
+    </textarea>
+    <button>Submit</button>
+
+</form>
+
+{% endpartialdef %}
+
+{% partialdef stall-form %}
+<form action="" class="form">
+    <label for="name">Full Name</label>
+    <input name="name" id="name" placeholder="My name is...." class="input" type="text">
+
+    <label for="entity">Years when you attended SMACK</label>
+    <input type="text" name="years" id="entity" placeholder="1999-2003">
+
+    <label for="cohort">Cohort Name</label>
+    <input type="text" name="cohort" id="cohort" placeholder="pirates">
+
+    <label for="phone">Mobile Phone</label>
+    <input type="text" name="phone" id="phone" placeholder="one,two,...">
+
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" placeholder="myname@....">
+
+    <label for="categories">Requesting as</label>
+    <select name="categories" id="categories">
+        {% for category in categories %}
+        <option value="{{category.id}}">{{category.name}}</option>
+        {% endfor %}
+    </select>
+
+
+    <label for="specifics">Product specifics</label>
+    <textarea name="specifics" id="specifics">
+        I want to....
+    </textarea>
+    
+    <label for="links">Links</label>
+    <textarea name="links" id="links">
+        Links to visual/conceptual samples.....
+    </textarea>
+
+    <label for="details">Any other Details</label>
+    <textarea name="details" id="details">
+        We do......
+    </textarea>
+
+    <button>Submit</button>
+
+</form>
+{% endpartialdef %}

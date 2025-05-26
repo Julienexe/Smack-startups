@@ -1,0 +1,350 @@
+{% extends "base.html" %}
+{% load static %}
+{% load partials %}
+
+
+
+{% block content %}
+<!-- hero
+    ================================================== -->
+<section id="hero" class="s-hero target-section">
+
+    <div class="s-hero__bg">
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <div class="row s-hero__content">
+        <div class="column">
+
+            <h1>Smack Startups</h1>
+            <div class="s-hero__content-about">
+
+                <p>
+                    Highlighting, celebrating & emboldening <br>
+                    entrepreneurial ventures co(founded) by <br>
+                    alumni of the 1906 establishment
+                </p>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="s-hero__scroll">
+        <a href="#about" class="s-hero__scroll-link smoothscroll">
+            Scroll Down
+        </a>
+    </div>
+
+</section> <!-- end s-hero -->
+
+
+<!-- about
+    ================================================== -->
+<section id="about" class="s-about">
+
+    <div class="horizontal-line"></div>
+
+    <div class="row">
+        <div class="column large-12">
+
+            <div class="section-title" data-num="01" data-aos="fade-up">
+                <h3 class="h6">Who We Are</h3>
+            </div>
+
+        </div>
+
+        <div class="column large-6 w-900-stack s-about__intro-text">
+            <h1 class="display-1" data-aos="fade-up">
+                This initiative is spearheaded by two foresighted 1906'ers 
+            </h1>
+
+            <p class="lead" data-aos="fade-up">
+                Meet the visionary pair
+                {% for item in teammates %}
+                {% include "partials/components.html#mason" %}
+
+                {% endfor %}
+
+            </p>
+        </div>
+
+
+
+        <div class="column large-6 w-900-stack s-about__photo-block">
+            <div class="s-about__photo" data-aos="fade-up"></div>
+        </div>
+
+
+
+    </div>
+
+
+    <h1 class="row" data-aos="fade-up">10 Point Grand Plan</h1>
+    <div class="row block-large-1-2 block-tab-full s-about__process item-list">
+        <div class="column item item-process" data-aos="fade-up">
+            <h3 class="item-title">SmackStaCon</h3>
+            <p>
+                The SMACK Startups Convention will be recurring annually.
+            </p>
+        </div>
+        <div class="column item item-process" data-aos="fade-up">
+            <h3 class="item-title">SMACK Parallel Curriculum</h3>
+            <p>
+                In process of rolling out our parallel learning program (entrepreneurial innovation, EQ, Cultural
+                Influence)
+
+            </p>
+        </div>
+        <div class="column item item-process" data-aos="fade-up">
+            <h3 class="item-title">Alumni Investment Network</h3>
+            <p>
+                Details in the 'network' section>>Overview
+            </p>
+        </div>
+        <div class="column item item-process" data-aos="fade-up">
+            <h3 class="item-title">Prepping Portal</h3>
+            <p>
+                Office-hour system for fundraising founders to be prepped before talking to investors
+            </p>
+        </div>
+        <div class="column item item-process" data-aos="fade-up">
+            <h3 class="item-title">SMACK Creatives Fund</h3>
+            <p>
+                Slated to be an annual monetary prize awarded to (a) groundbreaking weevil(s) in the creative sphere
+
+            </p>
+        </div>
+        <div class="column item item-process" data-aos="fade-up">
+            <h3 class="item-title">#WeevilCarnival & writers' program
+            </h3>
+            <p>
+                Slated to be an annual regional alumni-roster performing arts festival, plus a creative writers' support
+                program
+            </p>
+        </div>
+        <div class="column item item-process" data-aos="fade-up">
+            <h3 class="item-title">Ideation Hubs</h3>
+            <p>
+                Main feature of this site's second phase
+            </p>
+        </div>
+        <div class="column item item-process" data-aos="fade-up">
+            <h3 class="item-title">SMACK Creatives as an independent initiative</h3>
+            <p>
+                Achieved on 31st Jan this year
+            </p>
+        </div>
+        <div class="column item item-process" data-aos="fade-up">
+            <h3 class="item-title">External Collabs</h3>
+            <p>
+                Synergies with post-high school institutions, both in & out of the region
+            </p>
+        </div>
+        <div class="column item item-process" data-aos="fade-up">
+            <h3 class="item-title">Impact Gauging System</h3>
+            <p>
+                Initial version of this sub-initiative is the inaugural SMACK Cultural Impact Index, details of which
+                will grow more dynamic & intuitive.
+            </p>
+        </div>
+    </div>
+
+</section> <!-- end s-about -->
+
+
+<!-- services
+    ================================================== -->
+
+<section id="portal" class="s-portfolio">
+
+    <div class="row">
+        <div class="column large-12">
+            <div class="section-title" data-num="02" data-aos="fade-up">
+                <h3 class="h6">Prepping Portal</h3>
+            </div>
+        </div>
+        <div class="column large-6 w-900-stack">
+            <h1 class="display-1" data-aos="fade-up">
+                Prepping founders to effectively raise Capital for their initiatives and ventures
+            </h1>
+        </div>
+        <div class="column large-6 w-900-stack">
+            <p class="lead" data-aos="fade-up">
+            <div class="btn btn--primary btn--large modal-button" data-modal="slot-modal">
+
+                Book a Slot
+                <div>
+                    <div id="slot-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="modal-close">&times;</span>
+                            <h6>Only proceed if you are a smack alumnus <br> who is also a startup (co)founder!</h6>
+                            <div class="form-wrapper">
+
+                                {% include 'partials/forms.html#slot-form' %}
+                            </div>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+            </div>
+
+
+        </div> <!-- folio-list -->
+
+</section> <!-- end s-portfolio -->
+
+
+
+
+
+<!-- contact
+    ================================================== -->
+<section id="contact" class="s-contact">
+
+    <div class="row narrower s-contact__top ">
+        <div class="column form-wrapper">
+            <h3 class="h2 h-text-center">Get In Touch</h3>
+
+            {% include "partials/forms.html#contact-form" %}
+
+
+        </div>
+    </div> <!-- s-footer__top -->
+
+    <div class="row h-text-center">
+        <div class="column">
+            <p class="s-contact__email">
+                <a href="mailto:info@smackstartups.com">info@smackstartups.com</a>
+            </p>
+        </div>
+    </div>
+
+</section> <!-- end s-contact -->
+
+
+{% endblock %}
+<!-- clients
+    ================================================== -->
+<div id="clients" class="section s-clients">
+
+    <div class="row narrower s-clients__top h-text-center">
+        <div class="column">
+            <h1 class="display-1" data-aos="fade-up">
+                We've had the priveledge with working with
+                some of the largest and most iconic brands
+            </h1>
+        </div>
+    </div> <!-- s-clients__top -->
+
+    <div class="row clients-outer">
+        <div class="column">
+            <div class="clients" data-aos="fade-up">
+
+                <a href="#0" title="" class="clients__slide"><img
+                        src="{% static 'images/icons/clients/dropbox.svg' %}" /></a>
+                <a href="#0" title="" class="clients__slide"><img
+                        src="{% static 'images/icons/clients/atom.svg' %}" /></a>
+                <a href="#0" title="" class="clients__slide"><img
+                        src="{% static 'images/icons/clients/github.svg' %}" /></a>
+                <a href="#0" title="" class="clients__slide"><img
+                        src="{% static 'images/icons/clients/redhat.svg' %}" /></a>
+                <a href="#0" title="" class="clients__slide"><img
+                        src="{% static 'images/icons/clients/medium.svg' %}" /></a>
+                <a href="#0" title="" class="clients__slide"><img
+                        src="{% static 'images/icons/clients/messenger.svg' %}" /></a>
+                <a href="#0" title="" class="clients__slide"><img
+                        src="{% static 'images/icons/clients/steam.svg' %}" /></a>
+                <a href="#0" title="" class="clients__slide"><img
+                        src="{% static 'images/icons/clients/spotify.svg' %}" /></a>
+
+            </div> <!-- end clients -->
+        </div> <!-- end column -->
+    </div> <!-- end clients-outer -->
+
+    <div class="row testimonials collapse">
+
+        <div class="column large-12">
+
+            <div class="testimonial-slider" data-aos="fade-up">
+
+                <div class="testimonial-slider__slide">
+                    <p>
+                        Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem.
+                        Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores quaerat fuga
+                        rem nihil nostrum.
+                        Laudantium quia consequatur molestias delectus culpa.
+                    </p>
+                    <div class="testimonial-slider__author">
+                        <img src="{% static 'images/avatars/user-02.jpg' %}" alt="Author image"
+                            class="testimonial-slider__avatar">
+                        <cite class="testimonial-slider__cite">
+                            <strong>Tim Cook</strong>
+                            <span>CEO, Apple</span>
+                        </cite>
+                    </div>
+                </div> <!-- end testimonials__slide -->
+
+                <div class="testimonial-slider__slide">
+                    <p>
+                        Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi
+                        adipisci.
+                        Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
+                        Quasi voluptas eius distinctio. Atque eos maxime.
+                    </p>
+                    <div class="testimonial-slider__author">
+                        <img src="{% static 'images/avatars/user-01.jpg' %}" alt="Author image"
+                            class="testimonial-slider__avatar">
+                        <cite class="testimonial-slider__cite">
+                            <strong>Sundar Pichai</strong>
+                            <span>CEO, Google</span>
+                        </cite>
+                    </div>
+                </div> <!-- end testimonials__slide -->
+
+                <div class="testimonial-slider__slide">
+                    <p>
+                        Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt.
+                        Ducimus aut sed ipsam.
+                        Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius
+                        distinctio.
+                        Voluptatem dignissimos ut.
+                    </p>
+                    <div class="testimonial-slider__author">
+                        <img src="{% static 'images/avatars/user-04.jpg' %}" alt="Author image"
+                            class="testimonial-slider__avatar">
+                        <cite class="testimonial-slider__cite">
+                            <strong>Satya Nadella</strong>
+                            <span>CEO, Microsoft</span>
+                        </cite>
+                    </div>
+                </div> <!-- end testimonials__slide -->
+
+                <div class="testimonial-slider__slide">
+                    <p>
+                        Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis
+                        quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita
+                        voluptas odit.
+                        Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                    </p>
+                    <div class="testimonial-slider__author">
+                        <img src="{% static 'images/avatars/user-05.jpg' %}" alt="Author image"
+                            class="testimonial-slider__avatar">
+                        <cite class="testimonial-slider__cite">
+                            <strong>Jeff Bezos</strong>
+                            <span>CEO, Amazon</span>
+                        </cite>
+                    </div>
+                </div> <!-- end testimonials__slide -->
+
+            </div> <!-- end testimonial slider -->
+
+        </div> <!-- end column -->
+
+    </div> <!-- end row -->
+
+
+</div> <!-- end s-clients -->

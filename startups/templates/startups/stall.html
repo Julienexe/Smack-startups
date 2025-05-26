@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% load partials %}
+
+
+
+{% block content %}
+
+<section id="portfolio" class="s-portfolio">
+
+        <div class="row s-porfolio__top">
+            <div class="column large-6 w-900-stack">
+                <div class="section-title" data-num="01" data-aos="fade-up">
+                    <h3 class="h6">{{stall.name}}</h3>
+                </div>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h1 class="display-1" data-aos="fade-up">
+                    Here are some of our products, made by {{stall.name}}, with love.
+                </h1>
+            </div>
+        </div> <!-- end s-portfolio__top-->
+
+        <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
+            {% for product in products %}
+            {#use shop template partials #}
+            {% with item=product next="#"  %}
+            {% include "partials/shop-templates.html"  %}
+            {% endwith %}
+            {% endfor %}
+        </div> <!-- folio-list -->
+        
+    </section>
+    
+    
+    
+    {% endblock %}
+    
+    {% url 'startups:stalls' category.id as category_url %}

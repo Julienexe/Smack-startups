@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% load partials %}
+
+
+
+{% block content %}
+
+<section id="contact" class="s-contact">
+
+    <div class="row narrower s-contact__top ">
+        <div class="column form-wrapper">
+            <h3 class="h2 h-text-center">Create a Stall</h3>
+
+            {% include 'partials/forms.html#stall-form' %}
+
+        </div>
+    </div> <!-- s-footer__top -->
+
+    <div class="row h-text-center">
+        <div class="column">
+            <p class="s-contact__email">
+                <a href="mailto:info@smackstartups.com">info@smackstartups.com</a>
+            </p>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

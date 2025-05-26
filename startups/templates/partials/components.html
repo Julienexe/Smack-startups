@@ -1,0 +1,52 @@
+{% load static %}
+{% partialdef mason %}
+<div class="column" data-aos="fade-up">
+    <div class="folio-item">
+        <div class="folio-item__thumb">
+            <a class="folio-item__thumb-link" href="
+            {%if item.image%}
+                {{item.image.url}}
+            {% else %}
+                {% static 'images/portfolio/gallery/g-red-wheel.jpg' %}
+            {% endif %}"
+                data-fancybox="gallery" data-caption="{{item.slug}}"
+                data-fancybox-group="gallery" data-large-img="
+            {%if item.image%}
+                {% static item.image.url %}
+            {% else %}
+                {% static 'images/portfolio/gallery/g-red-wheel.jpg' %}
+            {% endif %}"
+                title="The Red Wheel" data-size="1050x700">
+                <img src="
+            {%if item.image%}
+                {{item.image.url}}
+            {% else %}
+                {% static 'images/portfolio/gallery/g-red-wheel.jpg' %}
+            {% endif %}"
+                    srcset="
+            {%if item.image%}
+                {{item.image.url}}
+            {% else %}
+                {% static 'images/portfolio/gallery/g-red-wheel.jpg' %}
+            {% endif %}"
+                    alt="">
+            </a>
+        </div>
+        <div class="folio-item__info">
+            <div class="folio-item__cat">
+                {%if item.position%}
+                    {{item.position}}
+                {% else %}
+                    {{item.name}}
+                {% endif %}
+            </div>
+            <h4 class="folio-item__title">{{item.name}}</h4>
+        </div>
+        <a href="#" title="View Profile" class="folio-item__project-link">View</a>
+        <div class="folio-item__caption">
+            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti
+                neque nisi.</p>
+        </div>
+    </div>
+</div>
+{% endpartialdef %}

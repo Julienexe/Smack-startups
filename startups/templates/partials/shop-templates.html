@@ -1,0 +1,38 @@
+{% load static %}
+
+{% partialdef grid-item item %}
+
+{# these templates all use item as the iterable class, please pass a next url and an item #}
+<div class="column" data-aos="fade-up">
+    <div class="item-badge">
+        {{item.name}}
+    </div>
+    <div class="folio-item">
+        <div class="folio-item__thumb">
+            <a class="folio-item__thumb-link" href="
+                        {%if item.image%}
+                            {{item.image.url}}
+                        {% else %}
+                            {% static 'images/portfolio/gallery/g-red-wheel.jpg' %}
+                        {% endif %}" title="{{item.slug}}" data-size="1050x700">
+                <img src="
+                            {%if item.image%}
+                                {{item.image.url}}
+                            {% else %}
+                                {% static 'images/portfolio/gallery/g-red-wheel.jpg' %}
+                            {% endif %}
+                            " srcset="" alt="">
+            </a>
+        </div>
+        <div class="folio-item__info">
+            <div class="folio-item__cat">{{item.name}}</div>
+            <h4 class="folio-item__title">{{item.name}}</h4>
+        </div>
+        <a href={{next}} title="Project Link" class="folio-item__project-link">See more</a>
+        <div class="folio-item__caption">
+            <p>{{item.description}}</p>
+        </div>
+    </div>
+</div>
+
+{%endpartialdef%}
