@@ -4558,7 +4558,6 @@ html.no-csstransitions .s-hero__content {
     font-size: 1.5rem;
     line-height: 2rem;
     color: white;
-    background-color: var(--color-1);
     padding: .6rem 1.2rem;
     margin-right: 1.2rem;
 
@@ -4671,10 +4670,10 @@ html.no-csstransitions .s-hero__content {
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: .6rem 1.2rem;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+  
+    visibility: default;
+    -webkit-transform: translateX(-40%);
+    transform: translateX(-40%);
     -webkit-transition: all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
     transition: all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
     position: absolute;
@@ -5497,6 +5496,13 @@ html.no-csstransitions .s-hero__content {
     text-align: center;
 }
 
+.helptext {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+}
+
 .socials button span {
     margin: 10px;
 }
@@ -5590,4 +5596,8 @@ html.no-csstransitions .s-hero__content {
         width: 90%;
         margin: 20% auto;
     }
+}
+
+.color-white {
+    color: white;
 }
