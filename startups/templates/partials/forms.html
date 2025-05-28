@@ -113,45 +113,12 @@
 
 {% endpartialdef %}
 
-{% partialdef stall-form %}
+{% partialdef model-form %}
 <form action="" class="form">
-    <label for="name">Full Name</label>
-    <input name="name" id="name" placeholder="My name is...." class="input" type="text">
-
-    <label for="entity">Years when you attended SMACK</label>
-    <input type="text" name="years" id="entity" placeholder="1999-2003">
-
-    <label for="cohort">Cohort Name</label>
-    <input type="text" name="cohort" id="cohort" placeholder="pirates">
-
-    <label for="phone">Mobile Phone</label>
-    <input type="text" name="phone" id="phone" placeholder="one,two,...">
-
-    <label for="email">Email</label>
-    <input type="text" name="email" id="email" placeholder="myname@....">
-
-    <label for="categories">Requesting as</label>
-    <select name="categories" id="categories">
-        {% for category in categories %}
-        <option value="{{category.id}}">{{category.name}}</option>
-        {% endfor %}
-    </select>
-
-
-    <label for="specifics">Product specifics</label>
-    <textarea name="specifics" id="specifics">
-        I want to....
-    </textarea>
-    
-    <label for="links">Links</label>
-    <textarea name="links" id="links">
-        Links to visual/conceptual samples.....
-    </textarea>
-
-    <label for="details">Any other Details</label>
-    <textarea name="details" id="details">
-        We do......
-    </textarea>
+    {%csrf_token%}
+    {% for field in form %}
+    {{field.as_field_group}}
+    {% endfor %}
 
     <button>Submit</button>
 
